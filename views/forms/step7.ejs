@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+  <div class="container-fluid pb-0">
+  <div class="main-content">
+    <div class="form-container">
+      <h2>Étape 7 : Médias</h2>
+      <form action="/submit/7" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="photo">Télécharger une photo:</label>
+          <input type="file" class="form-control" id="photo" name="mediaphoto" accept="image/*" >
+        </div>
+        <!--<div class="form-group">
+          <label for="video">Télécharger une vidéo:</label>
+          <input type="file" class="form-control" id="video" name="mediavideo" accept=".mp4,.mov,.avi">
+        </div>
+        <div class="form-group">
+          <label for="audio">Télécharger un audio:</label>
+          <input type="file" class="form-control" id="audio" name="mediaaudio" accept="audio/*">
+        </div>-->
+        <div class="form-group">
+          <label for="document">Télécharger un document:</label>
+          <input type="file" class="form-control" id="document" name="mediadocument" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <input type="text" class="form-control" id="description" name="mediadescription" placeholder="Description">
+        </div>
+        <div class="mt-4">
+          <div class="row">
+            <div class="col-4">
+              <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Suivant</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

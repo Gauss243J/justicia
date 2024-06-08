@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+  <div class="container-fluid pb-0">
+     <div class="main-content">
+       <div class="form-container">
+         <h2>Étape 1 : Identification</h2>
+         <form action="/submit/1" method="POST" enctype="multipart/form-data">
+           <div class="form-group">
+             <label>Prénom</label>
+             <input type="text" class="form-control" name="identification[firstName]" placeholder="Prénom" required>
+           </div>
+           <div class="form-group">
+             <label>Nom</label>
+             <input type="text" class="form-control" name="identification[lastName]" placeholder="Nom" required>
+           </div>
+           <div class="form-group">
+             <label>Postnom</label>
+             <input type="text" class="form-control" name="identification[middleName]" placeholder="Postnom">
+           </div>
+           <div class="form-group">
+             <label>Date de naissance</label>
+             <input type="date" class="form-control" name="identification[dob]" required>
+           </div>
+           <div class="form-group">
+             <label>Nationalité</label>
+             <input type="text" class="form-control" name="identification[nationality]" placeholder="Nationalité" required>
+           </div>
+           <div class="mt-4">
+             <div class="row">
+               <div class="col-4">
+                 <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Suivant</button>
+               </div>
+             </div>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+   

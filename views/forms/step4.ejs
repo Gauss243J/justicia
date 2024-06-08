@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+  <div class="container-fluid pb-0">
+  <div class="main-content">
+    <div class="form-container">
+      <h2>Étape 4 : Déclaration des biens</h2>
+      <form action="/submit/4" method="post">
+        <div class="form-group">
+          <label>Biens immobiliers</label>
+          <input type="text" class="form-control" name="assets[realEstate]" placeholder="Biens immobiliers" required>
+        </div>
+        <div class="form-group">
+          <label>Véhicules</label>
+          <input type="text" class="form-control" name="assets[vehicles]" placeholder="Véhicules" required>
+        </div>
+        <div class="form-group">
+          <label>Comptes bancaires</label>
+          <input type="text" class="form-control" name="assets[bankAccounts]" placeholder="Comptes bancaires" required>
+        </div>
+        <div class="form-group">
+          <label>Investissements</label>
+          <input type="text" class="form-control" name="assets[investments]" placeholder="Investissements" required>
+        </div>
+        <div class="form-group">
+          <label>Autres biens</label>
+          <input type="text" class="form-control" name="assets[otherAssets]" placeholder="Autres biens">
+        </div>
+        <div class="mt-4">
+          <div class="row">
+            <div class="col-4">
+              <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Suivant</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

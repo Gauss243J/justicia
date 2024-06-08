@@ -1,0 +1,85 @@
+
+  <%- include('partials/header') %>
+  <div class="container-fluid pb-0">
+  <div class="container">
+    <h1>Details of <%= person.identification.firstName %> <%= person.identification.lastName %></h1>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="<%= person.profile.image %>" alt="Profile Image" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h3>Identification</h3>
+        <p>First Name: <%= person.identification.firstName %></p>
+        <p>Middle Name: <%= person.identification.middleName %></p>
+        <p>Last Name: <%= person.identification.lastName %></p>
+        <p>Date of Birth: <%= person.identification.dob.toDateString() %></p>
+        <p>Nationality: <%= person.identification.nationality %></p>
+
+        <h3>Experience</h3>
+        <p>Previous Job: <%= person.experience.previousJob %></p>
+        <p>Years of Experience: <%= person.experience.yearsOfExperience %></p>
+        <p>Skills: <%= person.experience.skills %></p>
+        <p>Last Employer: <%= person.experience.lastEmployer %></p>
+        <p>Reason for Leaving: <%= person.experience.reasonForLeaving %></p>
+
+        <h3>Physical</h3>
+        <p>Height: <%= person.physical.height %></p>
+        <p>Weight: <%= person.physical.weight %></p>
+        <p>Eye Color: <%= person.physical.eyeColor %></p>
+        <p>Hair Color: <%= person.physical.hairColor %></p>
+        <p>Identifying Marks: <%= person.physical.identifyingMarks %></p>
+
+        <h3>Assets</h3>
+        <p>Real Estate: <%= person.assets.realEstate %></p>
+        <p>Vehicles: <%= person.assets.vehicles %></p>
+        <p>Bank Accounts: <%= person.assets.bankAccounts %></p>
+        <p>Investments: <%= person.assets.investments %></p>
+        <p>Other Assets: <%= person.assets.otherAssets %></p>
+
+        <h3>Preferences</h3>
+        <p>City: <%= person.preferences.city %></p>
+        <p>Country: <%= person.preferences.country %></p>
+        <p>Location Type: <%= person.preferences.locationType %></p>
+        <p>Season: <%= person.preferences.season %></p>
+        <p>Activities: <%= person.preferences.activities %></p>
+
+        <h3>Operations</h3>
+        <p>Current Workplace: <%= person.operations.currentWorkplace %></p>
+        <p>Main Operation Location: <%= person.operations.mainOperationLocation %></p>
+        <p>Other Operation Locations: <%= person.operations.otherOperationLocations %></p>
+        <p>Operation Duration: <%= person.operations.operationDuration %></p>
+        <p>Location Coordinates: <%= person.operations.locationCoordinates %></p>
+
+        <h3>Media</h3>
+        <% if (person.media.photo) { %>
+          <p>Photo: <img src="<%= person.media.photo %>" alt="Media Photo" class="img-fluid"></p>
+        <% } %>
+        <% if (person.media.video) { %>
+          <p>Video: <video controls src="<%= person.media.video %>" class="img-fluid"></video></p>
+        <% } %>
+        <% if (person.media.audio) { %>
+          <p>Audio: <audio controls src="<%= person.media.audio %>"></audio></p>
+        <% } %>
+        <% if (person.media.document) { %>
+          <p>Document: <a href="<%= person.media.document %>">Download Document</a></p>
+        <% } %>
+        <p>Description: <%= person.media.description %></p>
+
+        <h3>Profile</h3>
+        <p>Title: <%= person.profile.title %></p>
+        <p>Description: <%= person.profile.description %></p>
+        <p>Upload Date: <%= person.profile.uploadDate.toDateString() %></p>
+        <p>Photographer: <%= person.profile.photographer %></p>
+
+        <h3>Crimes</h3>
+        <p>Crime Type: <%= person.crimes.crimeType %></p>
+        <p>Crime Date: <%= person.crimes.crimeDate.toDateString() %></p>
+        <p>Crime Location: <%= person.crimes.crimeLocation %></p>
+        <p>Crime Details: <%= person.crimes.crimeDetails %></p>
+        <p>Legal Status: <%= person.crimes.legalStatus %></p>
+      </div>
+    </div>
+  </div>
+  <%- include('partials/footer') %>
+</body>
+</html>

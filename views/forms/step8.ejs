@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+  <div class="container-fluid pb-0">
+  <div class="main-content">
+    <div class="form-container">
+      <h2>Étape 8 : Image de profil</h2>
+      <form action="/submit/8" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="profileImage">Télécharger l'image de profil:</label>
+          <input type="file" class="form-control" id="profileImage" name="profileimage" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="imageTitle">Titre de l'image:</label>
+          <input type="text" class="form-control" id="imageTitle" name="profile[title]" placeholder="Titre de l'image" required>
+        </div>
+        <div class="form-group">
+          <label for="imageDescription">Description de l'image:</label>
+          <input type="text" class="form-control" id="imageDescription" name="profile[description]" placeholder="Description de l'image">
+        </div>
+        <div class="form-group">
+          <label for="uploadDate">Date de téléchargement:</label>
+          <input type="date" class="form-control" id="uploadDate" name="profile[uploadDate]" required>
+        </div>
+        <div class="form-group">
+          <label for="photographer">Photographe:</label>
+          <input type="text" class="form-control" id="photographer" name="profile[photographer]" placeholder="Photographe">
+        </div>
+        <div class="mt-4">
+          <div class="row">
+            <div class="col-4">
+              <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Suivant</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

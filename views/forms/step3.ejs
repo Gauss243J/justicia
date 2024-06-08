@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+  <div class="container-fluid pb-0">
+  <div class="main-content">
+    <div class="form-container">
+      <h2>Étape 3 : Caractéristiques physiques</h2>
+      <form action="/submit/3" method="post">
+        <div class="form-group">
+          <label>Taille (cm)</label>
+          <input type="number" class="form-control" name="physical[height]" placeholder="Taille (cm)" required>
+        </div>
+        <div class="form-group">
+          <label>Poids (kg)</label>
+          <input type="number" class="form-control" name="physical[weight]" placeholder="Poids (kg)" required>
+        </div>
+        <div class="form-group">
+          <label>Couleur des yeux</label>
+          <input type="text" class="form-control" name="physical[eyeColor]" placeholder="Couleur des yeux" required>
+        </div>
+        <div class="form-group">
+          <label>Couleur des cheveux</label>
+          <input type="text" class="form-control" name="physical[hairColor]" placeholder="Couleur des cheveux" required>
+        </div>
+        <div class="form-group">
+          <label>Marques distinctives</label>
+          <input type="text" class="form-control" name="physical[identifyingMarks]" placeholder="Marques distinctives">
+        </div>
+        <div class="mt-4">
+          <div class="row">
+            <div class="col-4">
+              <button type="submit" class="btn btn-outline-primary btn-block btn-lg">Suivant</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

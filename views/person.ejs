@@ -1,0 +1,105 @@
+<%- include('partials/header') %>
+  <div class="container-fluid pb-0">
+  <div class="container">
+    <div class="content">
+      <h2>Détails de la personne</h2>
+
+      <div class="details-section">
+        <h3>Profil</h3>
+        <% if (person.profile.image) { %>
+          <p>Image: <img src="<%= person.profile.image %>" alt="Image de profil" width=30% height="auto"></p>
+        <% } %>
+        <p><strong>Titre : </strong><%= person.profile.title %></p>
+        <p><strong>Description : </strong><%= person.profile.description %></p>
+        <p><strong>Date de téléchargement : </strong><%= person.profile.uploadDate %></p>
+        <p><strong>Photographe : </strong><%= person.profile.photographer %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Identification</h3>
+        <p><strong>Prénom : </strong><%= person.identification.firstName %></p>
+        <p><strong>Nom : </strong><%= person.identification.lastName %></p>
+        <p><strong>Postnom : </strong><%= person.identification.middleName %></p>
+        <p><strong>Date de naissance : </strong><%= person.identification.dob %></p>
+        <p><strong>Nationalité : </strong><%= person.identification.nationality %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Expérience</h3>
+        <p><strong>Emploi précédent : </strong><%= person.experience.previousJob %></p>
+        <p><strong>Années d'expérience : </strong><%= person.experience.yearsOfExperience %></p>
+        <p><strong>Compétences : </strong><%= person.experience.skills %></p>
+        <p><strong>Dernier employeur : </strong><%= person.experience.lastEmployer %></p>
+        <p><strong>Raison de départ : </strong><%= person.experience.reasonForLeaving %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Caractéristiques physiques</h3>
+        <p><strong>Taille : </strong><%= person.physical.height %> cm</p>
+        <p><strong>Poids : </strong><%= person.physical.weight %> kg</p>
+        <p><strong>Couleur des yeux : </strong><%= person.physical.eyeColor %></p>
+        <p><strong>Couleur des cheveux : </strong><%= person.physical.hairColor %></p>
+        <p><strong>Signes distinctifs : </strong><%= person.physical.identifyingMarks %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Déclaration des biens</h3>
+        <p><strong>Immobilier : </strong><%= person.assets.realEstate %></p>
+        <p><strong>Véhicules : </strong><%= person.assets.vehicles %></p>
+        <p><strong>Comptes bancaires : </strong><%= person.assets.bankAccounts %></p>
+        <p><strong>Investissements : </strong><%= person.assets.investments %></p>
+        <p><strong>Autres biens : </strong><%= person.assets.otherAssets %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Lieux préférés</h3>
+        <p><strong>Ville : </strong><%= person.preferences.city %></p>
+        <p><strong>Pays : </strong><%= person.preferences.country %></p>
+        <p><strong>Type de lieu : </strong><%= person.preferences.locationType %></p>
+        <p><strong>Saison : </strong><%= person.preferences.season %></p>
+        <p><strong>Activités : </strong><%= person.preferences.activities %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Lieux des opérations</h3>
+        <p><strong>Lieu de travail actuel : </strong><%= person.operations.currentWorkplace %></p>
+        <p><strong>Lieu principal des opérations : </strong><%= person.operations.mainOperationLocation %></p>
+        <p><strong>Autres lieux d'opérations : </strong><%= person.operations.otherOperationLocations %></p>
+        <p><strong>Durée des opérations : </strong><%= person.operations.operationDuration %></p>
+        <p><strong>Coordonnées : </strong><%= person.operations.locationCoordinates %></p>
+      </div>
+
+      <div class="details-section">
+        <h3>Médias</h3>
+        <% if (person.media.photo) { %>
+          <p>Photo: <img src="<%= person.media.photo %>" alt="Photo"></p>
+        <% } %>
+        <% if (person.media.video) { %>
+          <p>Vidéo: <a href="<%= person.media.video %>">Voir la vidéo</a></p>
+        <% } %>
+        <% if (person.media.audio) { %>
+          <p>Audio: <a href="<%= person.media.audio %>">Écouter l'audio</a></p>
+        <% } %>
+        <% if (person.media.document) { %>
+          <p>Document: <a href="<%= person.media.document %>">Voir le document</a></p>
+        <% } %>
+        <p>Description: <%= person.media.description %></p>
+      </div>
+
+
+      <div class="details-section">
+        <h3>Crimes</h3>
+        <p><strong>Type de crime : </strong><%= person.crimes.crimeType %></p>
+        <p><strong>Date du crime : </strong><%= person.crimes.crimeDate %></p>
+        <p><strong>Lieu du crime : </strong><%= person.crimes.crimeLocation %></p>
+        <p><strong>Détails du crime : </strong><%= person.crimes.crimeDetails %></p>
+        <p><strong>Statut judiciaire : </strong><%= person.crimes.legalStatus %></p>
+      </div>
+
+      <div class="mt-4">
+        <a href="/" class="btn btn-outline-secondary">Retour à la liste</a>
+      </div>
+    </div>
+  </div>
+</div>
+
